@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "promptsearch"
-version = "0.1.0"
+version = "0.2.0"
 description = "Automated Reverse Prompt Engineering: Evolve system prompts from target outputs."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -27,6 +27,9 @@ dependencies = [
     "sentence-transformers>=2.2.0",
     "numpy",
     "tqdm",
+    "streamlit>=1.28.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
 ]
 
 [project.optional-dependencies]
@@ -35,6 +38,9 @@ dev = [
     "black",
     "flake8",
 ]
+
+[project.scripts]
+promptsearch-ui = "promptsearch.cli:run_dashboard"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

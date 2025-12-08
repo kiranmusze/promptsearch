@@ -12,3 +12,13 @@ build/
 .vscode/
 *.swp
 
+# Local test script (not included in package)
+examples/email_to_event.py
+
+# Local secrets for examples (do not commit)
+examples/.env
+examples/secrets.env
+
+# SQLite database generated during testing
+promptsearch.db
+
